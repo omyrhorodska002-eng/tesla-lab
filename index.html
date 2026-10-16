@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Нікола Тесла — Геній Електрики</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #111827;
+            --border-color: #1f293d;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --electric-blue: #00d8ff;
+            --electric-glow: rgba(0, 216, 255, 0.3);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            box-shadow: 0 0 20px var(--electric-glow);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            color: var(--electric-blue);
+            font-size: 2.5em;
+            margin: 0;
+            letter-spacing: 2px;
+            text-shadow: 0 0 10px var(--electric-glow);
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            font-style: italic;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        nav a {
+            color: var(--electric-blue);
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 8px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 8px var(--electric-blue);
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        h2 {
+            color: var(--electric-blue);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-top: 0;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        blockquote {
+            background: #162032;
+            border-left: 4px solid var(--electric-blue);
+            margin: 20px 0;
+            padding: 15px;
+            font-style: italic;
+            color: #f1f5f9;
+        }
+
+        .nested-list {
+            padding-left: 20px;
+        }
+
+        .nested-list > li {
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: var(--electric-blue);
+        }
+
+        .nested-list ul {
+            font-weight: normal;
+            color: var(--text-main);
+            margin-top: 5px;
+            padding-left: 25px;
+        }
+
+        .nested-list ul li {
+            margin-bottom: 5px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .photo-card {
+            background: #0f172a;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--electric-blue);
+            box-shadow: 0 0 15px var(--electric-glow);
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 5px;
+            background-color: #000;
+        }
+
+        .photo-caption {
+            margin-top: 10px;
+            font-size: 0.95em;
+        }
+
+        .photo-caption strong {
+            color: var(--electric-blue);
+        }
+
+        .photo-caption em {
+            color: var(--text-muted);
+            font-size: 0.85em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: #0f172a;
+        }
+
+        caption {
+            caption-side: top;
+            text-align: left;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #1e293b;
+            color: var(--electric-blue);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #131c2e;
+        }
+
+        tfoot tr {
+            background-color: #1e293b;
+            color: var(--electric-blue);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            color: var(--text-muted);
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>НІКОЛА ТЕСЛА</h1>
+        <p class="subtitle">людина, яка навчила електрику працювати на майбутнє.</p>
+        <nav>
+            <a href="index.html">ГОЛОВНА</a> | 
+            <a href="#story">СЮЖЕТ</a> | 
+            <a href="#inventions">ВИНАХОДИ</a> | 
+            <a href="#photos">ФОТО</a> | 
+            <a href="#awards">НАГОРОДИ</a> | 
+            <a href="contact.html">ФОРМИ ТА ЗВ'ЯЗОК</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="story">
+            <h2>СЮЖЕТ</h2>
+            <blockquote>
+                «Якби ваша ненависть могла бути перетворена на електрику, це висвітлило б увесь світ.»
+                <br><cite>— Нікола Тесла</cite>
+            </blockquote>
+            <p><strong>Нікола Тесла — справжній геній, чиї винаходи назавжди змінили хід історії.</strong> Його ідеї набагато випередили свій час, тому Теслі приписували найрізноманітніші властивості. Доходило навіть до звинувачень у чаклунстві! На щастя, часи, коли подібні звинувачення були приводом для спалення на багатті, на той момент уже минули. Проте численні загадки, пов'язані з Теслою, досі хвилюють розуми багатьох людей.</p>
+            <p>Видатний винахідник та інженер, яким Ніколу Теслу вважають зараз, своего часу був звичайним хлопчиком, молодшим сином у родині сербів. На нього не покладали особливих надій, але доля розпорядилася по-своєму: старший брат Ніколи трагічно загинув. Тепер молодший син мав не розчарувати свого батька, і Нікола з острахом думав про те, що йому уготована доля священика.</p>
+        </section>
+
+        <section id="inventions">
+            <h2>ВИНАХОДИ ТА ПАРТНЕРИ</h2>
+            <p>Ключові розробки винахідника та його головні ділові союзи:</p>
+            <ol class="nested-list">
+                <li>
+                    Електроенергетика та двигуни:
+                    <ul>
+                        <li>Асинхронний двигун змінного струму;</li>
+                        <li>Перша гідроелектростанція, яка запрацювала на Ніагарському водоспаді;</li>
+                        <li>Люмінесцентна лампа;</li>
+                        <li>Турбіна Тесли.</li>
+                    </ul>
+                </li>
+                <li>
+                    Бездротові технології та прилади:
+                    <ul>
+                        <li>Котушка Тесла — резонансний трансформатор високої частоти;</li>
+                        <li>Збільшувальний передавач для вмикання ламп на відстані;</li>
+                        <li>Перший пульт дистанційного керування та радіокерований човен;</li>
+                        <li>Радіозв'язок та перші рентгенівські знімки.</li>
+                    </ul>
+                </li>
+                <li>
+                    Головний діловий партнер:
+                    <ul>
+                        <li><strong>Джордж Вестінгауз (George Westinghouse)</strong> — американський промисловець, який придбав патенти Тесли на системи змінного струму та співпрацював із ним у розвитку цієї технології. Він був не особистим помічником Тесли, а його діловим партнером.</li>
+                    </ul>
+                </li>
+            </ol>
+        </section>
+
+        
+        <section id="photos">
+            <h2>ФОТО</h2>
+            <div class="photo-grid">
+                
+                <!-- 1. Картинка звичайна -->
+                <div class="photo-card">
+                    <img src="images/tesla.jpg" alt="Нікола Тесла">
+                    <div class="photo-caption">
+                        <strong>Нікола Тесла</strong><br>
+                        <span>Портрет у лабораторії</span>
+                    </div>
+                </div>
+
+                <!-- 2. Картинка-посилання на іншу сторінку (westinghouse.html) -->
+                <div class="photo-card">
+                    <a href="westinghouse.html">
+                        <img src="images/westinghouse.jpg" alt="Джордж Вестінгауз">
+                    </a>
+                    <div class="photo-caption">
+                        <strong>Джордж Вестінгауз</strong><br>
+                        <em>(Натисніть для детальної інформації)</em>
+                    </div>
+                </div>
+
+                <!-- 3. Картинка з мапою посилань (клікабельна область для переходу на motor.html) -->
+                <div class="photo-card">
+                    <img src="images/motor.jpg" alt="Асинхронний двигун" usemap="#motor-map">
+                    <div class="photo-caption">
+                        <strong>Асинхронний двигун</strong><br>
+                        <em>(Натисніть для детальної інформації)</em>
+                    </div>
+                    <map name="motor-map">
+                        <area shape="rect" coords="0,0,300,280" href="motor.html" alt="Асинхронний двигун">
+                    </map>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="awards">
+            <h2>НАГОРОДИ</h2>
+            <table>
+                <caption>Офіційні ордени та визнання Ніколи Тесли</caption>
+                <thead>
+                    <tr>
+                        <th>Рік</th>
+                        <th>Нагорода / Подія</th>
+                        <th>Країна / Організація</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>1892</td><td>Великий офіцер ордена Святого Сави</td><td>Сербія</td></tr>
+                    <tr><td>1895</td><td>Великий хрест ордена князя Данила I</td><td>Чорногорія</td></tr>
+                    <tr><td>1915</td><td>Чутки про Нобелівську премію з фізики (разом із Т. Едісоном) — <em>не нагороджено</em></td><td>Reuters / Стокгольм</td></tr>
+                    <tr><td>1917</td><td>Медаль Едісона від AIEE</td><td>США</td></tr>
+                    <tr><td>1926</td><td>Великий хрест ордена Святого Сави</td><td rowspan="2">Югославія</td></tr>
+                    <tr><td>1931</td><td>Хрест ордена Югославської корони</td></tr>
+                    <tr><td>1934</td><td>Медаль Джона Скотта</td><td>Інститут Франкліна, США</td></tr>
+                    <tr><td rowspan="2">1937</td><td>Великий хрест ордена Білого лева</td><td>Чехословаччина</td></tr>
+                    <tr><td>Медаль Паризького університету</td><td>Франція</td></tr>
+                    <tr><td>1939</td><td>Медаль Софійського університету імені Св. Климента Охридського</td><td>Болгарія</td></tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2"><strong>Загальна кількість офіційних нагород:</strong></td>
+                        <td><strong>9 відзнак</strong></td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+
+    <footer id="contacts" style="text-align: center; padding: 25px; background: rgba(17, 24, 39, 0.9); border: 1px solid #1f293d; border-radius: 10px; color: #94a3b8; margin-top: 40px;">
+    <p>© 2026 Студентка Ольга. Усі права захищено.</p>
+    <p style="margin-top: 8px;">
+        mob. +38 (063) 412-89-77 &nbsp;|&nbsp; email: student.olga.dev@gmail.com &nbsp;|&nbsp; skype: olga_web_99
+    </p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота: Форми</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .form-section {
+            background: rgba(22, 27, 34, 0.9);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(0, 229, 255, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+        }
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 15px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #c9d1d9;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin: 10px 0 15px 0;
+        }
+        .radio-group label {
+            font-weight: normal;
+            margin-bottom: 0;
+            cursor: pointer;
+        }
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            font-weight: normal;
+            margin: 15px 0;
+        }
+        .social-links-box {
+            background: rgba(22, 27, 34, 0.9);
+            border: 1px dashed rgba(0, 229, 255, 0.4);
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .social-circle {
+            width: 45px;
+            height: 45px;
+            border: 2px dashed #00e5ff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #00e5ff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 12px;
+            transition: 0.3s;
+        }
+        .social-circle:hover {
+            background: rgba(0, 229, 255, 0.1);
+            box-shadow: 0 0 10px rgba(0, 229, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <span>Лабораторна робота: Форми</span>
+        <a href="index.html">← На головну</a>
+    </nav>
+
+    <div class="container" id="main">
+
+               <div class="content-section" style="background: rgba(22, 27, 34, 0.9); border-radius: 15px; padding: 25px; margin-bottom: 30px; border: 1px solid rgba(0, 229, 255, 0.3); overflow: hidden;">
+            <img src="images/tesla.jpg" alt="Нікола Тесла" style="float: left; width: 130px; height: 130px; object-fit: cover; border-radius: 10px; border: 2px dashed #00e5ff; margin-right: 20px; margin-bottom: 15px;">
+            <div class="text-block">
+                <h2 style="color: #00e5ff; margin-top: 0;">Загальна інформація про тему</h2>
+                <p>Нікола Тесла — видатний винахідник у галузі електротехніки та радіотехніки. Його розробки сформували основу сучасних систем передачі змінного струму. Заповніть форму нижче для зворотного зв'язку або реєстрації в нашому навчальному проєкті.</p>
+            </div>
+        </div>
+
+         
+        <div class="form-section">
+            <h2>Форма реєстрації</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Ім'я:</label>
+                        <input type="text" placeholder="Введіть ім'я" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Прізвище:</label>
+                        <input type="text" placeholder="Введіть прізвище" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Країна проживання:</label>
+                        <select>
+                            <option>Оберіть країну проживання</option>
+                            <option>Україна</option>
+                            <option>США</option>
+                            <option>Велика Британія</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Номер телефону:</label>
+                        <input type="tel" placeholder="+38(0XX)XXX-XX-XX" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Соцмережа:</label>
+                        <input type="text" placeholder="Посилання на соцмережу">
+                    </div>
+                    <div class="form-group">
+                        <label>Електронна пошта:</label>
+                        <input type="email" placeholder="example@tesla.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Пароль:</label>
+                        <input type="password" placeholder="Пароль" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Вік:</label>
+                        <input type="number" min="1" max="120" value="21">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Стать:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" checked> Чоловіча</label>
+                            <label><input type="radio" name="gender"> Жіноча</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Дата народження:</label>
+                        <input type="date">
+                    </div>
+                </div>
+
+                <label class="checkbox-label">
+                    <input type="checkbox" required> Чи згідні Ви з умовами?
+                </label>
+
+                <div style="display: flex; gap: 15px; margin-top: 20px;">
+                    <button type="submit">Зареєструватися</button>
+                    <button type="reset" style="background: #30363d; color: #c9d1d9;">Відміна</button>
+                </div>
+            </form>
+        </div>
+
+       
+        <div class="form-section" style="max-width: 600px; margin: 0 auto 30px auto;">
+            <h2>Форма входу</h2>
+            <form>
+                <div class="form-group">
+                    <label>Логін:</label>
+                    <input type="text" placeholder="Логін або email" required>
+                </div>
+                <div class="form-group">
+                    <label>Пароль:</label>
+                    <input type="password" placeholder="Пароль" required>
+                </div>
+                <button type="submit" style="width: 100%; margin-top: 10px;">Вхід</button>
+            </form>
+        </div>
+
+         
+        <div class="form-section">
+            <h2>Форма зворотного зв'язку</h2>
+            <form>
+                <div class="form-row">
+                    <div>
+                        <div class="form-group">
+                            <label>Ім'я:</label>
+                            <input type="text" placeholder="Ваше ім'я" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Ел. пошта:</label>
+                            <input type="email" placeholder="Ел. пошта" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Тема повідомлення:</label>
+                            <select>
+                                <option>Запитання щодо винахідника</option>
+                                <option>Технічна підтримка</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="form-group">
+                            <label>Повідомлення:</label>
+                            <textarea rows="7" placeholder="Ваше повідомлення..." required></textarea>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+
+        
+        <div class="social-links-box">
+            <strong>Посилання на соц. мережі:</strong>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                <a href="#" class="social-circle">TG</a>
+                <a href="#" class="social-circle">IN</a>
+                <a href="#" class="social-circle">YT</a>
+                <a href="#" class="social-circle">X</a>
+            </div>
+        </div>
+
+    </div>
+
+    <a href="#main" class="scroll-top" title="Вгору">▲</a>
+
+    <footer id="contacts" style="text-align: center; padding: 25px; background: rgba(17, 24, 39, 0.9); border: 1px solid #1f293d; border-radius: 10px; color: #94a3b8; margin-top: 40px;">
+    <p>© 2026 Студентка Ольга. Усі права захищено.</p>
+    <p style="margin-top: 8px;">
+        mob. +38 (063) 412-89-77 &nbsp;|&nbsp; email: student.olga.dev@gmail.com &nbsp;|&nbsp; skype: olga_web_99
+    </p>
+</footer>
+
+</body>
+</html>
